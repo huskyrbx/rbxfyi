@@ -1,0 +1,79 @@
+
+var CPABUILDContentLocker;
+function CPBContentLocker() {
+    this.settings = CPABUILDSETTINGS;
+    this.referrer = this.encode(document.referrer);
+    this.protocol=("https:" == document.location.protocol ? "https://" : "http://");
+    this.isMobile = this.mobileCheck();
+    this.urls={};
+    this.extraParams={};
+    this.setParamsFromSettings();
+    this.setDomain();
+
+
+    this.body = document.getElementsByTagName('body')[0];
+    this.head = document.getElementsByTagName('head')[0];
+
+    this.constructed=false;
+
+
+    if (parseInt(this.settings.it) > 0 && this.settings.construct !== false) {
+
+        this.loadBody();
+        this.templateCSSDir="";
+
+        this.defaultSettings = [];
+        this.userSettings = [];
+        this.modal = null;
+        this.modalContainer = null;
+        this.modalContent = null;
+        this.animation = null;
+        this.iframe = null;
+        this.animationSupport = false;
+        this.isLoaded = false;
+
+        this.requiredPoints = 10000;
+        this.requiredLeads = 1;
+        this.completedLeads = [];
+        this.completedPoints = 0;
+        this.visitor_id = 0;
+
+        this.detectAnimationSupport();
+
+        this.loadHTML();
+        this.neededCents = 1;
+
+        this.constructed=true;
+    }
+
+}
+
+
+function CPABuildLock() {
+    CPABUILDContentLocker.openLocker();
+}
+function CPABuildGetFeedURL() {
+    return CPABUILDContentLocker.getFeedURL();
+}
+function CPABuildGetIframeURL() {
+    return CPABUILDContentLocker.getIframeURL();
+}
+function CPABuildGetIframeHTML() {
+    return CPABUILDContentLocker.getIframeHTML();
+}
+function CPABuildUnlock() {
+    CPABUILDContentLocker.closeLocker();
+}
+function CPABuildOfferComplete(data) {
+    //CPABUILDContentLocker.offerComplete(data);
+}
+function CPABuildOffersComplete(arr) {
+    CPABUILDContentLocker.addCompletions(arr);
+}
+function CPABuildCheckForLead(testing) {
+    CPABUILDContentLocker.checkLead(testing);
+}
+var og_load = call_locker = CPABuildLock;
+function CPABuildComplete() {
+    //Rewrite this function, it's called when locker has completed requirements.
+}

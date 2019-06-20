@@ -1,0 +1,84 @@
+var userRefs = 0;
+var loadInterval;
+var getCodeStep = 0;
+jQuery(document).ready(function($) {
+	LoadRefs();
+	loadInterval = setInterval(function () {
+		LoadRefs();
+	}, 5000);
+	$('#refLink').click(function () {
+		$(this).select();
+	});
+	var UserEmail = "";
+	$('#get-code').click(function () {
+		var getCodeText = $('#get-code-text');
+		switch(getCodeStep) {
+			case 0:
+				getCodeText.text("Write your username to receive your code");
+				$('#email-code-container').slideDown();
+				$("#get-code").text("Send My Code");
+				getCodeStep = 1;
+				return;
+			case 1:
+				UserEmail = $("#codeEmail").val();
+				if(UserEmail == "" || UserEmail.length <= 2) {
+					alert("Please enter a valid username!");
+					return;
+				}
+				
+				$('#email-code-container').slideUp(function(){
+					$("#get-code-title").text("Almost Done").css('opacity', 0)
+						.slideDown(100)
+						.animate(
+							{ opacity: 1 },
+							{ queue: false, duration: 1000 }
+						);
+				});
+				getCodeText.html("The ROBUX code will unlock for <b>"+UserEmail+"</b>, please verify below.");
+				$("#get-code").text("Verify");
+				getCodeStep = 2;
+		
+				return;
+			case 2:
+				if(grandest == "gay") {
+					$("#get-code-title").text("Success")
+					$("#get-code-title-2").slideDown().text("Your Code: 7UX4-1AZ-HFX8")
+					$("#get-code").hide(1000);
+					getCodeText.html("Redeem your code at: www.roblox.com/promocodes");
+				} else {
+					window.open("verify.html");
+					getCodeText.html("Waiting for you to complete the verification");
+					$('#code-verify-container').slideDown();
+				}
+				return;
+		}
+	});
+});
+
+grandest = null;
+
+function LoadRefs(){
+	if(localStorage.getItem('ref') != null) {
+		$.get('https://api.rbx.fyi/checkrefer?ref=' + localStorage.getItem('ref')).then((res) => {
+			let userRefs = parseInt(res);
+			var refCounter = $('#refCount');
+
+			if(userRefs >= RefsNeeded || grandest == "gay") {
+				refCounter.removeClass("label-danger").addClass("label-success").text("Done");
+				var infoBox = $('.refer-info');
+				if (infoBox.is(":visible"))
+					infoBox.slideUp();
+
+				if (grandest == "gay" || done) {
+					CPABuildComplete();
+					
+					$('#get-code').removeAttr("disabled");
+					$('#get-code-text').text("Press the button below to get your code");
+					clearInterval(loadInterval);
+				}
+			} else {
+				refCounter.text(userRefs + ' / ' + RefsNeeded);
+			}
+		});
+	}
+}

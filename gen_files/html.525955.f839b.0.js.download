@@ -1,0 +1,44 @@
+(function () {var it_id=525955;var html="<div id=\"CPABUILD_MODAL\">\r\n    <div id=\"CPABUILDMODALCONTENT\">\r\n        <div id=\"CPABUILDMODALHEADER\">\r\n            <div id=\"CPABUILDMODALTITLE\"><\/div> <\/div>\r\n        <div id=\"CPABUILDMODALBODY\">\r\n            <iframe id=\"CPABUILDOFFERS\" style=\"overflow:hidden;\" src=\"\"><\/iframe>\r\n        <\/div>\r\n        <div id=\"CPABUILDMODALFOOTER\">\r\n            <p id=\"CPABUILDMODALFOOTERTEXT\"><\/p>\r\n        <\/div>\r\n    <\/div>\r\n<\/div>\r\n";var css="\/content_lockers\/PrimeApps\/css.css";var cssDIR="PrimeApps";var defaultSettings={"%custom_settings%":{"title":"Custom Settings (From Builder Tool)","default":"{}","type":"html","small":"Click Save & Preview Below to start building this locker.","custom_filter":true},"number_offers":{"title":"Number of Offers","default":4,"type":"number","small":"Max of 5 offers."},"number_offers_required":{"title":"Offers Required","default":1,"type":"number","small":"Offers required for unlock."},"payout_required":{"title":"Payout Required (Cents)","default":1,"type":"number","small":"Payout required (in cents). 500 = $5.00"},"animation":{"title":"Entrance Animation","default":"CPABUILD_fadeIn","type":"select","options":{"Drop From Top":"CPABUILD_animateTop","Fade In":"CPABUILD_fadeIn","Slide From Right":"CPABUILD_slideRight","Slide Up":"CPABUILD_slideUp","Slide From Right (3D)":"CPABUILD_slideFall","Spin In":"CPABUILD_spinIn"}},"animation_duration":{"title":"Animation Duration (ms)","default":"600","type":"number","small":"1000ms = 1 second"},"onClose":{"title":"On Offer Complete","default":"redirect","type":"select","options":{"Close Locker":"close_locker","Redirect to URL":"redirect"}},"onCloseURL":{"title":"Redirect URL","default":"http:\/\/cpabuild.com\/public\/redirect.php?lead_id=%lead_id%","type":"text","small":"The URL the visitor will hit after completing an offer. Only enabled if option above is set to redirect."},"disable_right_click":{"title":"Disable Right Click","default":"0","type":"toggle","small":"Right click will be disabled for the entire page."},"escape_key_close":{"title":"Escape Key Close","default":"0","type":"toggle","small":"If enabled, user can exit content locker with escape key."}};var userSettings={"%custom_settings%":"{\"css\":{\"pc\":{\"body\":{\"background\":{\"color\":\"#ffffff\",\"horizontal\":\"left\",\"image\":\"\",\"size\":\"cover\",\"vertical\":\"top\"}},\"body-human-verification\":{\"background\":{\"color\":\"#fbfbfb\",\"horizontal\":\"left\",\"image\":\"\",\"size\":\"cover\",\"vertical\":\"top\"},\"background-hover\":{\"color\":\"#b1b1b1\",\"horizontal\":\"left\",\"image\":\"\",\"size\":\"cover\",\"vertical\":\"top\"},\"border-radius\":\"4\",\"border-color\":\"#b9b9b9\",\"border-color-hover\":\"#b9b9b9\",\"border-width\":\"1\",\"font-color\":\"#9c9c9c\",\"font-color-hover\":\"#565656\",\"font-size\":\"14\",\"font-weight\":\"normal\",\"margin-bottom\":\"79\",\"margin-top\":\"84\",\"padding-top\":\"8\",\"padding-bottom\":\"8\"},\"body-offers\":{\"text-bottom-align\":\"center\",\"text-bottom-color\":\"#02b757\",\"text-bottom-padding-bottom\":\"17\",\"text-bottom-padding-top\":\"12\",\"text-bottom-shadow\":\"transparent\",\"text-bottom-size\":\"13\",\"text-bottom-weight\":\"normal\",\"text-top-align\":\"center\",\"text-top-color\":\"#02b757\",\"text-top-padding-bottom\":\"20\",\"text-top-padding-top\":\"21\",\"text-top-shadow\":\"transparent\",\"text-top-size\":\"17\",\"text-top-weight\":\"normal\"},\"body-offers-list\":{\"align\":\"center\",\"background\":{\"color\":\"#02b757\",\"horizontal\":\"left\",\"image\":\"\",\"size\":\"cover\",\"vertical\":\"top\"},\"background-hover\":{\"color\":\"#ffffff\",\"horizontal\":\"left\",\"image\":\"\",\"size\":\"cover\",\"vertical\":\"top\"},\"border-color\":\"#b9b9b9\",\"border-radius\":\"3\",\"border-width\":\"1\",\"font-color\":\"#ffffff\",\"font-color-hover\":\"#02b757\",\"font-size\":\"13\",\"font-weight\":\"normal\",\"margin-bottom\":\"4\",\"margin-top\":\"0\",\"padding-bottom\":\"9\",\"padding-top\":\"9\",\"text-align\":\"center\",\"width\":\"50\"},\"header\":{\"background\":{\"color\":\"#02b757\",\"horizontal\":\"left\",\"image\":\"\",\"size\":\"cover\",\"vertical\":\"top\"},\"border-color\":\"#ffffff\",\"border-width\":\"1\",\"border-box-shadow\":\"#d1d1d1\",\"display\":\"block\",\"font-align\":\"center\",\"font-color\":\"#ffffff\",\"font-size\":\"30\",\"font-weight\":\"bold\",\"padding-bottom\":\"18\",\"padding-top\":\"21\"},\"footer\":{\"background\":{\"color\":\"#02b757\",\"horizontal\":\"left\",\"image\":\"\",\"size\":\"cover\",\"vertical\":\"top\"},\"border-color\":\"#ffffff\",\"border-width\":\"1\",\"border-box-shadow\":\"#d1d1d1\",\"display\":\"block\",\"font-align\":\"center\",\"font-color\":\"#ffffff\",\"font-size\":\"14\",\"font-weight\":\"normal\",\"padding-bottom\":\"11\",\"padding-top\":\"11\"},\"locker\":{\"border-radius\":\"2\",\"box-shadow\":\"#292929\",\"font\":\"Roboto\",\"width\":\"800\"},\"page\":{\"background\":{\"color\":\"#000000\",\"horizontal\":\"left\",\"image\":\"\",\"size\":\"cover\",\"vertical\":\"top\"},\"opacity\":\"65\"}},\"phone\":{\"body\":{},\"body-human-verification\":{\"border-radius\":\"4\",\"border-width\":\"1\",\"font-size\":\"11\",\"font-weight\":\"normal\",\"margin-bottom\":\"57\",\"margin-top\":\"60\",\"padding-top\":\"8\",\"padding-bottom\":\"8\"},\"body-offers\":{\"text-bottom-padding-bottom\":\"15\",\"text-bottom-padding-top\":\"9\",\"text-bottom-size\":\"15\",\"text-bottom-weight\":\"normal\",\"text-top-padding-bottom\":\"15\",\"text-top-padding-top\":\"19\",\"text-top-size\":\"16\",\"text-top-weight\":\"normal\"},\"body-offers-list\":{\"border-width\":\"1\",\"font-size\":\"16\",\"font-weight\":\"normal\",\"margin-bottom\":\"4\",\"margin-top\":\"0\",\"padding-bottom\":\"5\",\"padding-top\":\"6\",\"width\":\"100\"},\"header\":{\"border-width\":\"0\",\"font-size\":\"20\",\"font-weight\":\"normal\",\"padding-bottom\":\"10\",\"padding-top\":\"10\"},\"footer\":{\"border-width\":\"1\",\"font-size\":\"20\",\"font-weight\":\"normal\",\"padding-bottom\":\"8\",\"padding-top\":\"5\"},\"locker\":{},\"page\":{}}},\"css-custom\":\"#my-locker-top span span {\\n    display:inline-block !important;\\n}\\n#my-locker-top span img {\\n    height:39px;\\n    width:auto;\\n}\",\"google\":{\"analytics-tracking-id\":\"\",\"event-tracking\":\"disabled\",\"translate\":\"enabled\"},\"javascript-custom\":\"\",\"offers\":{\"display\":\"7\",\"min-offers\":\"2\",\"min-payout\":\"1\",\"on-complete\":\"redirect\",\"redirect-url\":\"https:\/\/www.rabbitfiles.com\/cl.php?id=d07187754425e2fdae9f5c41879a1906\",\"show-tooltips\":\"disabled\"},\"other\":{\"alert-before-leaving\":\"disabled\",\"disable-right-click\":\"enabled\",\"esc-key-close\":\"disabled\",\"human-verification\":\"disabled\"},\"text\":{\"header\":\"Robux Codes\",\"human-verification\":\"Verify Through Survey\",\"body-top\":\"complete 2 of the offers below to claim your robux code\",\"body-bottom\":\"Waiting for verification%dots%\",\"footer\":\"* Real info required to verify.\"}}","number_offers":7,"number_offers_required":2,"payout_required":1,"animation":"CPABUILD_fadeIn","animation_duration":600,"onClose":"redirect","onCloseURL":"https:\/\/www.rabbitfiles.com\/cl.php?id=d07187754425e2fdae9f5c41879a1906","disable_right_click":1,"escape_key_close":0};cpaBuildExecuteWithBody();
+function cpaBuildExecuteWithBody(){
+    if(typeof document.getElementsByTagName("body")[0]=="undefined"){
+        setTimeout(cpaBuildExecuteWithBody,1);
+    }
+    //Specific CSS
+    CPABUILDContentLocker.setTemplateCSSDir(cssDIR);
+
+    var specificCSSID="CPABUILDSPECIFICSTYLE";
+    var currentCSSEl=document.getElementById(specificCSSID);
+    CPABUILDContentLocker.removeElByID("CPABUILD_MODAL_CONTAINER");
+/*    if(!currentCSSEl){
+        addCSSLink();
+    }
+    else if(currentCSSEl.dataset.it!=it_id){
+        {
+            CPABUILDContentLocker.removeElByID(specificCSSID);
+            addCSSLink();
+        }
+    }*/
+
+/*    function addCSSLink(){
+        var l= document.createElement("link");
+        l.setAttribute("data-it",it_id);
+        l.rel="stylesheet";
+        l.id=specificCSSID;
+        l.href=CPABUILDContentLocker.prefix+"templates.cpabuild.com"+css;
+        document.getElementsByTagName("head")[0].appendChild(l);
+        var currentCSSEl=document.getElementById(specificCSSID);
+    }*/
+
+
+//HTML
+    CPABUILDContentLocker.removeElByID("CPABUILD_MODAL_CONTAINER");
+    var d=document.createElement("div");
+    d.style="display:none;";
+    d.id="CPABUILD_MODAL_CONTAINER";
+    d.innerHTML=html;
+    document.getElementsByTagName("body")[0].appendChild(d);
+    CPABUILDContentLocker.defaultSettings=defaultSettings;
+    CPABUILDContentLocker.userSettings=userSettings;
+    CPABUILDContentLocker.onVarsChange();
+}
+})();
